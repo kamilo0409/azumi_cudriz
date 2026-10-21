@@ -1,0 +1,70 @@
+Algoritmo PagoParqueadero
+ Definir tipoVehiculo, horas Como Entero
+ Definir nombreVehiculo Como Cadena
+ Definir tarifa, descuento, totalPagar Como Real
+
+Escribir "PARQUEADERO"
+Escribir "1. Moto"
+scribir "2. Automovil"
+ Escribir "3. Camioneta"
+ Escribir "Ingrese el tipo de vehiculo:"
+Leer tipoVehiculo
+
+ Escribir "Ingrese las horas de permanencia:"
+ Leer horas
+
+ Si tipoVehiculo < 1 O tipoVehiculo > 3 O horas < 0 Entonces
+ Escribir "Error: datos no validos."
+ SiNo
+ Si tipoVehiculo = 1 Entonces
+  nombreVehiculo <- "Moto"
+ Si horas <= 2 Entonces
+ tarifa <- 3000
+SiNo
+ Si horas <= 5 Entonces
+tarifa <- 5000
+ SiNo
+ tarifa <- 8000
+FinSi
+FinSi
+ SiNo
+ Si tipoVehiculo = 2 Entonces
+nombreVehiculo <- "Automovil"
+Si horas <= 2 Entonces
+tarifa <- 5000
+ SiNo
+ Si horas <= 5 Entonces
+ tarifa <- 8000
+  SiNo
+tarifa <- 12000
+ FinSi
+ FinSi
+SiNo
+nombreVehiculo <- "Camioneta"
+ Si horas <= 2 Entonces
+ tarifa <- 7000
+ SiNo
+ Si horas <= 5 Entonces
+ tarifa <- 10000
+SiNo
+tarifa <- 15000
+FinSi
+FinSi
+ FinSi
+FinSi
+
+Si horas > 8 Entonces
+descuento <- tarifa * 0.10
+ SiNo
+ descuento <- 0
+ FinSi
+
+totalPagar <- tarifa - descuento
+ Escribir "----- RESULTADOS -----"
+ Escribir "Tipo de vehiculo: ", nombreVehiculo
+ Escribir "Horas de permanencia: ", horas
+ Escribir "Tarifa inicial: $", tarifa
+ Escribir "Descuento: $", descuento
+ Escribir "Total a pagar: $", totalPagar
+ FinSi
+FinAlgoritmo
