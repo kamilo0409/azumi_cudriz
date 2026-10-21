@@ -1,0 +1,48 @@
+Algoritmo promedioAcademico
+Definir nombre , clasificacion Como Cadena
+Definir promedio Como Real
+Definir materias Como Entero
+Definir porcentaje Como Entero
+Escribir "ingrese el nombre del estudiante:"
+Leer nombre
+Escribir "ingrese el promedio (0 a 5):"
+Leer promedio
+Escribir" ingrese el numero de materias matriculadas:"
+Leer materias
+ Si promedio >=0 y promedio <=5 y materias >=0 Entonces
+Si promedio >=4.5 Entonces
+  clasificacion <-"excelente"
+SiNo
+Si promedio >=4.0 Entonces
+  clasificacion <-"muy bueno"
+SiNo
+Si promedio >=3.0 Entonces
+  clasificacion <-"aprobado"
+SiNo
+clasificacion <-"reprobado"
+FinSi 
+FinSi
+FinSi
+
+Escribir"nombre:", nombre
+Escribir"promedio:", promedio
+Escribir"clasificacion:", clasificacion
+Escribir"materias matriculadas:", materias
+
+Si promedio >=4.0 Entonces
+Si materias <=5 Entonces
+porcentaje<-20
+SiNo
+porcentaje<-30
+FinSi
+
+Escribir "recibe el beneficio academico"
+Escribir"porcentaje de beneficio:", porcentaje, "%"
+SiNo
+Escribir "no cumple los requisitos para el beneficio."
+Escribir"porcentaje de beneficio:0%"
+FinSi
+SiNo
+Escribir "error : ingrese un promedio entre 0 y 5 materias no negativas."
+FinSi
+FinAlgoritmo
